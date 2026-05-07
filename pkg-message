@@ -9,3 +9,8 @@ Example configuration files are provided as:
 
 For more information, see:
 https://docs.datadoghq.com/integrations/
+
+NOTE: The Redis integration provided here is also compatible with Valkey.
+
+NOTE: Some integrations (like ZFS, SMART, SNMP) may require additional
+system-level utilities to be installed (e.g., smartmontools, net-snmp).
