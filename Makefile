@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MAINTAINER=	uros@gruber.si
 COMMENT=	Datadog Agent Integrations
 
-LICENSE=	BSD4CLAUSE
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
@@ -18,7 +18,6 @@ RUN_DEPENDS=	datadog-agent>=7.24.1:sysutils/datadog-agent \
 		${PYTHON_PKGNAMEPREFIX}pysocks>0:net/py-pysocks@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>0:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests-unixsocket>0:www/py-requests-unixsocket@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}simplejson>0:devel/py-simplejson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
@@ -36,7 +35,6 @@ GH_TAGNAME=	${DISTVERSION}
 ETCDIR=		${PREFIX}/etc/datadog
 
 NO_ARCH=	yes
-NO_BUILD=	yes
 
 USERS=		datadog
 GROUPS=		${USERS}
@@ -67,24 +65,24 @@ SYS_SWAP_DESC=	System Swap check integration
 TCP_DESC=	TCP check integration
 TLS_DESC=	TLS check integration
 
-APACHE_VARS=	integrations+=apache conffiles+=apache
-CONSUL_VARS=	integrations+=consul conffiles+=consul
-COREDNS_VARS=	integrations+=coredns conffiles+=coredns
-DIRECTORY_VARS=	integrations+=directory conffiles+=directory
-DISK_VARS=	integrations+=disk conffiles+=disk
-DNS_VARS=	integrations+=dns_check conffiles+=dns_check
-MYSQL_VARS=	integrations+=mysql conffiles+=mysql
-NETWORK_VARS=	integrations+=network conffiles+=network
-NGINX_VARS=	integrations+=nginx conffiles+=nginx
-PHP_VARS=	integrations+=php_fpm conffiles+=php_fpm
-POSTFIX_VARS=	integrations+=postfix conffiles+=postfix
-PROCESS_VARS=	integrations+=process conffiles+=process
-REDIS_VARS=	integrations+=redisdb conffiles+=redisdb
-SSH_VARS=	integrations+=ssh_check conffiles+=ssh_check
-SYS_CORE_VARS=	integrations+=system_core conffiles+=system_core
-SYS_SWAP_VARS=	integrations+=system_swap conffiles+=system_swap
-TCP_VARS=	integrations+=tcp_check conffiles+=tcp_check
-TLS_VARS=	integrations+=tls conffiles+=tls
+APACHE_VARS=	INTEGRATIONS+=apache CONFFILES+=apache
+CONSUL_VARS=	INTEGRATIONS+=consul CONFFILES+=consul
+COREDNS_VARS=	INTEGRATIONS+=coredns CONFFILES+=coredns
+DIRECTORY_VARS=	INTEGRATIONS+=directory CONFFILES+=directory
+DISK_VARS=	INTEGRATIONS+=disk CONFFILES+=disk
+DNS_VARS=	INTEGRATIONS+=dns_check CONFFILES+=dns_check
+MYSQL_VARS=	INTEGRATIONS+=mysql CONFFILES+=mysql
+NETWORK_VARS=	INTEGRATIONS+=network CONFFILES+=network
+NGINX_VARS=	INTEGRATIONS+=nginx CONFFILES+=nginx
+PHP_VARS=	INTEGRATIONS+=php_fpm CONFFILES+=php_fpm
+POSTFIX_VARS=	INTEGRATIONS+=postfix CONFFILES+=postfix
+PROCESS_VARS=	INTEGRATIONS+=process CONFFILES+=process
+REDIS_VARS=	INTEGRATIONS+=redisdb CONFFILES+=redisdb
+SSH_VARS=	INTEGRATIONS+=ssh_check CONFFILES+=ssh_check
+SYS_CORE_VARS=	INTEGRATIONS+=system_core CONFFILES+=system_core
+SYS_SWAP_VARS=	INTEGRATIONS+=system_swap CONFFILES+=system_swap
+TCP_VARS=	INTEGRATIONS+=tcp_check CONFFILES+=tcp_check
+TLS_VARS=	INTEGRATIONS+=tls CONFFILES+=tls
 
 # find integrations-core -name setup.py | awk -F\/ '{print $2}' | sort | uniq | grep -v datadog_checks_dev | tr '\n' ' '
 INTEGRATIONS=	datadog_checks_base
@@ -100,7 +98,7 @@ MYSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>0:security/py-cryptograph
 NETWORK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR}
 PHP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flup6>0:www/py-flup6@${PY_FLAVOR}
 PROCESS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR}
-REDIS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}redis>0:databases/py-redis
+REDIS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}redis>0:databases/py-redis@${PY_FLAVOR}
 SSH_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}paramiko>0:security/py-paramiko@${PY_FLAVOR}
 SYS_CORE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR}
 SYS_SWAP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR}
