@@ -1,0 +1,11 @@
+To use the Datadog Agent Integrations, you need to enable them in the
+Datadog Agent configuration.
+
+Each integration has its own configuration file in:
+%%ETCDIR%%/conf.d/<integration>.d/conf.yaml
+
+Example configuration files are provided as:
+%%ETCDIR%%/conf.d/<integration>.d/conf.yaml.example
+
+For more information, see:
+https://docs.datadoghq.com/integrations/

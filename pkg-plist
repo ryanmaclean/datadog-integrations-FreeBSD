@@ -40,7 +40,6 @@
 %%APACHE%%%%PYTHON_SITELIBDIR%%/datadog_checks/apache/data/conf.yaml.example
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/__about__.py
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/__init__.py
-%%PYTHON_SITELIBDIR%%/datadog_checks/base/__init__.py.orig
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/__pycache__/__about__.cpython-37.pyc
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/__pycache__/__init__.cpython-37.pyc
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/__pycache__/config.cpython-37.pyc
@@ -130,7 +129,6 @@
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/stubs/similar.py
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/stubs/tagging.py
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/types.py
-%%PYTHON_SITELIBDIR%%/datadog_checks/base/types.py.orig
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/utils/__init__.py
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/utils/__pycache__/__init__.cpython-37.pyc
 %%PYTHON_SITELIBDIR%%/datadog_checks/base/utils/__pycache__/aws.cpython-37.pyc
@@ -428,7 +426,6 @@
 %%TLS%%%%PYTHON_SITELIBDIR%%/datadog_checks/tls/__pycache__/utils.cpython-37.pyc
 %%TLS%%%%PYTHON_SITELIBDIR%%/datadog_checks/tls/data/conf.yaml.example
 %%TLS%%%%PYTHON_SITELIBDIR%%/datadog_checks/tls/tls.py
-%%TLS%%%%PYTHON_SITELIBDIR%%/datadog_checks/tls/tls.py.orig
 %%TLS%%%%PYTHON_SITELIBDIR%%/datadog_checks/tls/utils.py
 %%PYTHON_SITELIBDIR%%/datadog_checks/utils/__init__.py
 %%PYTHON_SITELIBDIR%%/datadog_checks/utils/__pycache__/__init__.cpython-37.pyc
