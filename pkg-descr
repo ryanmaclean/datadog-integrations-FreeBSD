@@ -1,7 +1,9 @@
-Cloud-Scale Monitoring
+The Datadog Agent Integrations (also known as checks) supported by the
+Datadog Agent on FreeBSD. This collection includes support for core
+system metrics (disk, network, process) and popular applications like
+Apache, MySQL, Nginx, PostgreSQL, Redis, and more.
 
-The Datadog Agent Integrations (also known as checks) supported by Datadog Agent.
-This collection includes support for various services such as Apache, MySQL,
-Nginx, and Redis (which also provides compatibility for Valkey).
+This port also includes FreeBSD-specific integrations for monitoring
+ZFS datasets and SMART disk health.
 
 WWW: https://www.datadoghq.com/
