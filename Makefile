@@ -36,6 +36,7 @@ GH_TAGNAME=	${DISTVERSION}
 ETCDIR=		${PREFIX}/etc/datadog
 
 NO_ARCH=	yes
+NO_BUILD=	yes
 
 USERS=		datadog
 GROUPS=		${USERS}
